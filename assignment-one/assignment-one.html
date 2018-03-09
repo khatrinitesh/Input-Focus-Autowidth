@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Input focus autowidth</title>
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<div class="container">
+		<form action="" class="search_container">
+			<div class="loca_cont">
+				<input type="text" class="form_control">
+			</div>
+			<div class="car_cont">
+				<input type="text" class="form_control">
+			</div>
+			<div class="sear_cont">
+				<input type="text" class="form_control">
+			</div>
+			<button class="btn btn_sear"></button>
+		</form>
+	</div>
+
+	<script type='text/javascript' src="js/jquery-1.12.0.min.js"></script>
+	<script type='text/javascript'>
+		$(".search_container input").focus(function(){
+			$(this).parent().addClass("active").siblings("div").css("width","15%");
+		});
+
+		$(".search_container").focusout(function() {
+			$(this).children("div").css("width", "28%").removeClass("active");
+		});
+	</script>
+</body>
+</html>

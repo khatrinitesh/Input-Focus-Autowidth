@@ -1,0 +1,56 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+.container{
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+form .loca_cont,
+form .car_cont,
+form .sear_cont
+{
+	float: left;
+	margin-right: 5px;
+	width: 28%;
+	transition: width .5s ease;
+	-webkit-transition: width .5s ease; 
+}
+
+form .loca_cont .form_control,
+form .car_cont .form_control,
+form .sear_cont .form_control
+{
+	height: 30px;
+	width: 100%;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0 0 0 10px;
+	-webkit-transition: all .8s linear;
+	-o-transition: all .8s linear;
+	transition: all .8s linear;
+}
+
+form .btn_sear{
+	background: #000 url('../img/icon_sear.png') no-repeat center;
+	color: #fff;
+	width: 30px;
+	border-radius: 5px;
+	height: 30px;
+	border: 1px solid #000;
+	display: inline-block;
+}
+
+form .loca_cont.active,
+form .car_cont.active,
+form .sear_cont.active
+{
+	width: 55% !important;
+}
